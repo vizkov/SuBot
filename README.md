@@ -1,0 +1,2 @@
+# SuBot
+Modular, AppSec bot
