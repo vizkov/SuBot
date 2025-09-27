@@ -1,5 +1,5 @@
 # SuBot
-Modular, AppSec bot
+Modular, AppSec bot 
 
 [ * ] modular i.e. any script/tool integration instead of fixed tooling.
 
