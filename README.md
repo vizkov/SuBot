@@ -5,6 +5,7 @@ Modular, AppSec bot
 
 [ * ] micro-kernel architecture
 - only chassis is defined
+- Can generate Meta tags driven
 - Takes in highly configurable input
 - AI acts as chassis for all ops: https://chatgpt.com/c/68c5396a-e03c-832e-9bd6-61a9c9a5261c   
 	- Evaluator, 
@@ -56,7 +57,6 @@ Modular, AppSec bot
 [ * ] DAG Continuous Learning: https://chatgpt.com/c/68d694d9-e5b4-8332-af51-3bb21e06e7f1
 - highly configurable, account and registration
 - Adopts Character Progression System design patterns
-- Meta tags driven
 - Can Attain Skills
 - Pre-configured with sets of skills it can hone
 - Can identify takeaways from experiences to form into a skill-progress
