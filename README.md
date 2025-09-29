@@ -44,6 +44,10 @@ Modular, AppSec bot
 	- Optimizer 
 - Data sources: Noise reduction, redundancy, metadata, duplication
 
+[ * ] opensource LLM + Paid LLM
+	- OSS LLM to do expensive routines such as processing memory, context building
+	- Reduce the number of tokens sent to paid LLM.
+
 [ * ] Continuously Builds Security Context/map
 - Static and Ephemeral
 - Enriches methodology/profile 
