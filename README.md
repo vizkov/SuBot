@@ -50,7 +50,7 @@ Modular, AppSec bot
 - Reduce the number of tokens sent to paid LLM.
 
 [ * ] Continuously Builds Security Context/map
-- Static and Ephemeral, Mixed-configurable 
+- Static and Ephemeral, Mixed-configurable
 - Enriches methodology/profile 
 - Enriches DAG Continuous Learning
 
