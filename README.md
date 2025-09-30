@@ -44,7 +44,11 @@ Modular, AppSec bot
 	- Adapt to input/suggestions 
 	- Act on user guidance
  	- provide Logs	
-- Optimize generated Data: Noise reduction, redundancy, metadata, duplication
+- Optimization: https://chatgpt.com/c/68db5fbc-5018-832f-bb89-3c1f9fd34c1d
+	- Data: Noise reduction, redundancy, metadata, duplication
+ 	- Chirality
+    - Symmetry
+    - Assymetry 
 
 [ * ] opensource LLM + Paid LLM
 - OSS LLM to do expensive routines such as processing memory, context building
@@ -63,7 +67,7 @@ Modular, AppSec bot
 - highly configurable sources to develop/learn/practice 
 - Adopts Character Progression System design patterns
 - Can Attain Skills
-- Pre-configured with sets of skills it can hone
+- Pre-configured with sets of skills, it can hone
 - Can identify takeaways from experiences to form into a skill-progress
 - Can identify skills gap within existing skillset
 - Can look for new skills
