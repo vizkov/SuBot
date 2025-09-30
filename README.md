@@ -48,7 +48,9 @@ Modular, AppSec bot
 	- Data: Noise reduction, redundancy, metadata, duplication
  	- Chirality
     - Symmetry
-    - Assymetry 
+    - Asymmetry
+    - Super-Asymmetry
+    - Super-Symmetry
 
 [ * ] opensource LLM + Paid LLM
 - OSS LLM to do expensive routines such as processing memory, context building
