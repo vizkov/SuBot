@@ -44,13 +44,14 @@ Modular, AppSec bot
 	- Adapt to input/suggestions 
 	- Act on user guidance
  	- provide Logs	
-- Optimization: https://chatgpt.com/c/68db5fbc-5018-832f-bb89-3c1f9fd34c1d
+- Optimization, SCA(symmetry/chirality/asymmetry/super‑variants): https://chatgpt.com/c/68db5fbc-5018-832f-bb89-3c1f9fd34c1d
 	- Data: Noise reduction, redundancy, metadata, duplication
  	- Chirality
     - Symmetry
     - Asymmetry
     - Super-Asymmetry
     - Super-Symmetry
+    - Emergence
 
 [ * ] opensource LLM + Paid LLM
 - OSS LLM to do expensive routines such as processing memory, context building
