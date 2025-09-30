@@ -52,6 +52,7 @@ Modular, AppSec bot
     - Super-Asymmetry
     - Super-Symmetry
     - Emergence
+    - Markov chain
 
 [ * ] opensource LLM + Paid LLM
 - OSS LLM to do expensive routines such as processing memory, context building
