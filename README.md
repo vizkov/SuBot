@@ -55,6 +55,7 @@ Modular, AppSec bot
     - Super-Symmetry
     - Emergence
     - Markov chain
+    - game theory
 
 [ * ] opensource LLM + Paid LLM
 - OSS LLM to do expensive routines such as processing memory, context building
