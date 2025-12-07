@@ -56,6 +56,7 @@ Modular, AppSec bot
     - Emergence
     - Markov chain
     - game theory
+    - Rainbow table compacting of context/tokens
 
 [ * ] opensource LLM + Paid LLM
 - OSS LLM to do expensive routines such as processing memory, context building
