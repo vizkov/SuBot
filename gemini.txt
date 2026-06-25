@@ -1,0 +1,73 @@
+This review evaluates the SuBot Project instructions (Bootstrap-Instructions.md, Project-Instructions.md, Obsidian-Guide.md, and Testing-Guide.md) within the context of a Claude Desktop "Project" environment.
+
+Observations
+Modular Architecture: The system uses a "Bootstrap" approach to keep the initial context window clean while providing clear triggers (e.g., "process design feedback") to load heavier documentation when needed.
+
+Strong Design Governance: There is a clear "Design Before Implementation" mandate, enforced by a requirement to check for existing questions (02), decisions (03), and roadmap alignment (04) before starting new work.
+
+Precision Editing: The instructions prioritize surgical edits via str_replace over full-file rewrites, which is critical for maintaining token efficiency and preventing the "hallucination" of unintended changes.
+
+Syntactic Rigor: The Obsidian syntax requirements are highly specific, particularly regarding block IDs (^component-topic-description) and the requirement for display text in block links.
+
+Flagged Issues
+1. Documentation Drift & Broken Internal Links
+Issue: There are circular and broken links between the meta-documents.
+
+Obsidian-Guide.md directs the reader to [[Project-Instructions#Obsidian Syntax Usage]] for quick reference.
+
+However, Project-Instructions.md explicitly states that syntax examples were moved to [[Misc/Obsidian-Guide]] and does not contain a "Obsidian Syntax Usage" section.
+
+Issue: Testing-Guide.md references a section [[Project-Instructions#Post-Edit Validation]], but no such section header exists in the current Project-Instructions.md.
+
+Issue: Testing-Guide.md is dated 2025-12-15, while the other core documents are dated 2026-01-01. This suggests the validation rules may be out of sync with the current workflow.
+
+2. Path Mismatch & Tooling Conflict
+Issue: The Bootstrap defines a Windows base path (H:\My Drive\subot-project\) but instructs Claude to use bash_tool (Linux environment) for searching.
+
+Risk: Linux bash commands (like grep or ls) will fail to recognize Windows drive letters (H:\) and backslashes unless a specific Linux mount point (e.g., /mnt/h/...) is provided and used. This will cause constant tool execution errors when Claude tries to search.
+
+3. Line Numbering Paradox
+Issue: Project-Instructions.md requires using "actual file line numbers" as reference points for edits.
+
+Risk: Maintaining accurate line numbers is extremely difficult for an AI during a session, especially when using str_replace. If Claude makes one surgical edit that adds or removes a line, all subsequent line number references in the conversation become incorrect, leading to edits being applied to the wrong locations.
+
+4. High-Friction Metadata Guardrails
+Issue: The "CRITICAL - Status Field Usage" rule mandates that Claude STOP immediately if a user sets an incorrect status on a meta-document.
+
+Risk: This creates high friction. If a user makes a simple typo or forgets the specific "Reference Guide" status, the entire workflow is interrupted by a hard stop and a mandatory confirmation dialogue.
+
+5. Implicit "Timestamp" Check
+Issue: The Bootstrap tells Claude "Don't read [extended instructions] when... Document unchanged since last read (check timestamp)".
+
+Risk: Claude cannot "check" a file's timestamp without first calling a tool (like list_directory or get_file_info). This step is not explicitly defined in the Bootstrap's "Core Rules" or session start protocol.
+
+Recommendations
+Standardize Path Handling:
+
+Update Bootstrap-Instructions.md to include the Linux-equivalent path for the Windows base path.
+
+Instruct Claude to use the Filesystem tools for all path-based operations and reserved bash_tool for complex memory-efficient searches (like grep) only if the mount mapping is confirmed.
+
+Abolish Line Number References:
+
+Replace the requirement for "line numbers" with a requirement for "unique string anchors."
+
+Surgical edits are safer when they target unique headers or specific, unique phrases rather than shifting line indices.
+
+Repair the "Instruction Loop":
+
+Synchronize Testing-Guide.md to the 2026-01-01 versioning.
+
+Remove the circular links between the Obsidian Guide and Project Instructions. Designate Obsidian-Guide.md as the sole source of truth for syntax to avoid drift.
+
+Automate Status Corrections:
+
+Instead of "STOP immediately" for status field errors on meta-documents, change the protocol to: "Inform the user of the error, automatically correct the status in the next edit, and continue the workflow."
+
+Explicit Session-Start Checklist:
+
+Add a protocol to Bootstrap-Instructions.md requiring Claude to run Filesystem:list_directory on the Misc/ folder at the beginning of every session. This allows it to actually "see" if timestamps have changed without being told by the user.
+
+Define "Discussed Properly":
+
+In Project-Instructions.md, define a "Ready for Implementation" (RFI) state. A component should only be implemented if it has an ADR in 03-decisions-log.md and no OPEN questions in 02-design-questions.md.

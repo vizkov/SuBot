@@ -1,0 +1,5 @@
+	- In Claude Desktop(local MCP support e.g. File System) there is a feature called "Projects". As such with each project a user can add "Project Instructions" to it which get applied to all the project chats. You can look up online to understand how this works. 
+	- There is a project which is going to be used to design a system, and this project is going to have this feature of applying instructions. These instructions have been captured within the uploaded documents. 
+	- Note: Only Bootstrap-instructions gets copy-pasted into the "Project Instructions". 
+	- Note: The instructions have been written in Markdown using Obsidian. The system design documents will also be in Markdown using Obsidian.
+	- Based on the context you now have, your job is to skeptically review these documents and provide your observations, flag issues and suggest recommendations.
