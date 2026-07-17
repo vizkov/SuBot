@@ -9,4 +9,6 @@ Although it started as a project with a particular [vision/goal](00-overview.md)
 - [Ref guide for Claude to follow as an architect](https://github.com/vizkov/SuBot/blob/main/Misc/Project-Instructions.md)
 - [Ref guide for Claude to follow for testing and validating its output](https://github.com/vizkov/SuBot/blob/main/Misc/Testing-Guide.md)
 
+Note: A lot has changed since I carried out this elaborate activity/exercise (2025), and it may be outdated.
+
 
