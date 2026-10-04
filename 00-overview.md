@@ -45,7 +45,7 @@ SORT file.name ASC
 
 ```dataview
 TABLE file.mtime as "Last Modified"
-FROM "2.1-component-designs" OR "2.2-security"
+FROM "1.1-component-designs" OR "1.2-security"
 SORT file.folder ASC, file.name ASC
 ```
 

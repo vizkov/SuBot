@@ -26,7 +26,7 @@
 - Basic object representation
 - File-based storage
 
-**Related:** [[01-architecture#^microkernel-architecture|Micro-kernel architecture]], [[2.1-component-designs/2.1.1-chassis|Chassis design]]
+**Related:** [[01-architecture#^microkernel-architecture|Micro-kernel architecture]], [[1.1-component-designs/1.1.1-chassis|Chassis design]]
 
 **Implementation Tasks (Chassis)**:
 1. [ ] Implement core Chassis class
